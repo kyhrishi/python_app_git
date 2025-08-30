@@ -2,6 +2,7 @@ import pytest
 from pydantic import ValidationError
 from user import User
 
+
 def test_user_creation():
     user = User(name="Alice", email="alice@example.com", userid=1)
     assert user.name == "Alice"
@@ -13,6 +14,7 @@ def test_user_creation():
         "email": "alice@example.com",
         "userid": 1
     }
+
 
 def test_user_invalid_email_raises_error():
     with pytest.raises(ValidationError):
