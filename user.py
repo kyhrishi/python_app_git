@@ -6,6 +6,9 @@ class User(BaseModel):
     email: EmailStr
     userid: int
 
-
-user = User(name="Alice", email="kyhrishi@gmail.com", userid=1)
-print(user.model)
+    def model(self):
+        return {
+            "name": self.name,
+            "email": self.email,
+            "userid": self.userid
+        }
