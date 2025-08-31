@@ -1,2 +1,5 @@
 pydantic
 pytest
+pydantic[email]
+coverage
+flake8
